@@ -41,7 +41,7 @@
                     */
                 var response = http.responseText;
                 // YOU MUST HAVE AN EMPTY <div> SOMEWHERE WHERE WE USE THE innerHTML METHOD OF JS TO WRITE THE NEW CONTENT.
-            document.getElementById('display.php').innerHTML = response;   
+            document.getElementById('sideDisplay').innerHTML = response;   
             }
         }
       </script>
@@ -53,7 +53,7 @@
                <h1>Vivamus Ullamcorper Consequat </h1>
             </div>
             <div id="nav">
-               <a href="#">Vivamus</a> | 
+               <a href="#" onclick="sndReq('', 'rock')">Vivamus</a> | 
                <a href="#">Ullamcorper</a> | 
                <a href="#">Consequat</a> | 
                <a href="#">Sollicitudin</a> | 
@@ -91,9 +91,9 @@
                </p>
                <p>
                   <b>Labels: </b><br />
-                  <a href="#">Atlantic</a> | 
-                  <a href="#">Epic</a> | 
-                  <a href="#">Columbia</a>
+                  <a href="#" onclick="sndReq('label', 'atlantic')">Atlantic</a> | 
+                  <a href="#" onclick="sndReq('label', 'epic')">Epic</a> | 
+                  <a href="#" onclick="sndReq('label', 'columbia')">Columbia</a>
                </p>
                <div id="sideDisplay">
                </div>
