@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery Basics</title>
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!-- link t jquery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//console.log("ready to go..");
+		$("p").click(function(e) {
+			//console.log("clicked paragraph")
+			//$(this).hide();
+			e.preventDefault();
+		});
+		$("#link1").click(function(e) {
+			//console.log("clicked link1");
+
+			$("img").hide();
+
+			e.preventDefault();
+		});
+
+		$("#link2").click(function(e) {
+			$("#rightcontent").animate({width: "20%", opacity: 0.4});
+			e.preventDefault();
+		});
+		$("#link3").click(function(e) {
+			$("img").hide(1000, function() {
+				//example of jquery callback
+				//console.log("clicked callback");
+				$("#textbanner").fadeOut(function(){
+					$("#rightcontent").css("background-color", "red");
+				});
+			});
+			e.preventDefault();
+		});
+		$("#link4").click(function(e) {
+			$("#logo").animate({
+				opacity: 0.25,
+				left: "+=500"
+			}, 2000);
+			e.preventDefault();
+		});
+		$("#link5").click(function(e) {
+			$("#logo").effect("bounce", {times: 3},300);
+
+			e.preventDefault();
+		});
+	});
+</script>
+
+
+</head>
+<body>
+
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<img src="images/mylogo.jpg">
+		</div>
+		<div id="rightnav">
+			<ul>
+				<li><a href="#" id="link1">Home</a></li> 
+				<li><a href="#" id="link2">Animate</a></li> 
+				<li><a href="#" id="link3">Fade</a></li> 
+				<li><a href="#" id="link4">Logo Animate</a></li> 
+				<li><a href="#" id="link5">Bounce</a></li> 
+				
+			</ul>
+
+		</div>
+		<br style="clear:both;">
+	</div><!-- \ header -->
+	<div id="splash">
+		<div class="splashitem">
+			<img src="images/img01.jpg"><br>
+			<p>Feature Item #1</p>
+		</div>
+		<div class="splashitem">
+			<img src="images/img02.jpg"><br>
+			<p>Feature Item #2</p>
+		</div>
+		<div class="splashitem">
+			<img src="images/img03.jpg"><br>
+			<p>Feature Item #3</p>
+		</div>
+		<br style="clear:both;">
+	</div>
+
+<div id="textbanner">
+	Integer sagittis ac dui sed molestie. Aenean id sem eu ligula laoreet ornare. Aliquam posuere mi et dolor dapibus finibus.	
+
+</div>
+
+	<div id="leftcontent">
+	<div id="leftlinks">
+	<ul>
+		<li><a href="#">Link 1</a></li>
+		<li><a href="#">Link 2</a></li>
+		<li><a href="#">Link 3</a></li>
+	</ul>
+		
+
+	</div>
+		<p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz.</p>
+
+		<p>Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl quack. Quick wafting zephyrs vex bold Jim. Quick zephyrs blow, vexing daft Jim. Sex-charged fop blew my junk TV quiz. How quickly daft jumping zebras vex. Two driven jocks help fax my big quiz.</p>
+
+	</div>
+	<div id="rightcontent">
+		<p>Quick, Baz, get my woven flax jodhpurs! "Now fax quiz Jack! " my brave ghost pled. Five quacking zephyrs jolt my wax bed. Flummoxed by job, kvetching W. zaps Iraq. Cozy sphinx waves quart jug of bad milk. A very bad quack might jinx zippy fowls.</p>
+
+		<p>Few quips galvanized the mock jury box. Quick brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and my wolves quack! Blowzy red vixens fight for a quick jump. Joaquin Phoenix was gazed by MTV for luck. A wizard’s job is to vex chumps quickly in fog.</p>
+
+		<p>Watch "Jeopardy! ", Alex Trebek's fun TV quiz game. Woven silk pyjamas exchanged for blue quartz. Brawny gods just flocked up to quiz and vex him. Adjusting quiver and bow, Zompyc[1] killed the fox. My faxed joke won a pager in the cable TV quiz show.</p>
+
+		<p>Amazingly few discotheques provide jukeboxes. My girl wove six dozen plaid jackets before she quit. Six big devils from Japan quickly forgot how to waltz. Big July earthquakes confound zany experimental vow. Foxy parsons quiz and cajole the lovably dim wiki-girl. Have a pick: twenty six letters - no forcing a jumbled quiz! Crazy Fredericka bought many very exquisite opal jewels. Sixty zippers were quickly picked from the woven jute bag. A quick</p>
+	</div>
+
+
+
+<br style="clear:both;">
+
+</div>
+
+
+</body>
+</html>

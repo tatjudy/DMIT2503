@@ -1,0 +1,14 @@
+/* create custom css classes */
+
+.red  {
+    color: #f00;
+    font-weight: bold;
+}
+
+.factoid {
+    border: 1px solid grey;
+    padding: 5px;
+    background-color: #C8C8C8;
+    font-style: italic;
+    font-weight: bold;
+}
